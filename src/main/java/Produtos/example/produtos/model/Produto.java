@@ -16,7 +16,7 @@ public class Produto {
                 ", preço=" + preço +
                 '}';
     }
-
+//spring.jpa.database-platform=org.hibernate.dialect.H2Dialect
 
     public String getId() {
         return id;
