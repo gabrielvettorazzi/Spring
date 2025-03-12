@@ -1,22 +1,23 @@
 package Produtos.example.produtos.model;
 
+import jakarta.persistence.Column;
+import jakarta.persistence.Entity;
+
+//MODELO DE NEGOCIOS
+@Entity
 public class Produto {
+
+        @Column(name = "id")
         private String id;
+        @Column
         private String nome;
+        @Column
         private String descricao;
+        @Column
         private Double preço;
 
 
-    @Override
-    public String toString() {
-        return "Produto{" +
-                "id='" + id + '\'' +
-                ", nome='" + nome + '\'' +
-                ", descricao'" + descricao + '\'' +
-                ", preço=" + preço +
-                '}';
-    }
-//spring.jpa.database-platform=org.hibernate.dialect.H2Dialect
+
 
     public String getId() {
         return id;
@@ -50,5 +51,15 @@ public class Produto {
     public void setPreço(Double preço) {
         this.preço = preço;
     }
+    @Override
+    public String toString() {
+        return "produto{" +
+                "id='" + id + '\'' +
+                ", nome='" + nome + '\'' +
+                ", descricao'" + descricao + '\'' +
+                ", preço=" + preço +
+                '}';
+    }
+
 }
 
